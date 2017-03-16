@@ -1,0 +1,48 @@
+//- filepath: /sites/default/files/uploads/outage/filename.filetype
+
+doctype html
+html(lang="en")
+	head
+		title km.com/selfserve-outage
+		// START of local webserver CSS resources
+		link(rel="icon", type="image/png", href="http://localhost:4000/public/icons/koodo-blueberry-favicon-196-196.png")
+		link(rel="stylesheet" href="http://localhost:4000/public/font-stag-sans-web/stag-sans-web.css")
+		link(rel="stylesheet" href="http://localhost:4000/public/font-kooding-glyphs/kooding-glyphs.css")
+		link(rel="stylesheet" href="http://localhost:4000/public/styles/page-title-helper.css")
+		link(rel="stylesheet" href="http://localhost:4000/public/styles/window-dimensions-helper.css")
+		// END of local webserver CSS resources
+		link(rel="stylesheet" href="styles/main.css")
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		style.
+			/* project-specific local-only styles go here */
+			body { margin: 0; background-color: #8cd9ed; }
+
+			#site-container { max-width: 1160px; margin: 0 auto; }
+	body
+		div#site-wrapper.page-content <!-- markup to mirror production page structure -->
+			div#ptHelper <!-- markup to mirror production page structure -->
+				h2 Self Serve Outage [EN] / Libre-service temporairement hors réseau [FR]
+			div#site-container <!-- markup to mirror production page structure -->
+				div#site-content <!-- markup to mirror production page structure -->
+					div.content <!-- markup to mirror production page structure -->
+						main.km-outage(role="main")
+							section.language-block.lang-en
+								video.outage-video.paddle(autoplay loop muted)
+								div.copy-block
+									p.large-text #[span Self Serve is down right now.] Which means our robots are taking a siesta. We'll go wake them up. Please try again later.
+									p.small-text Got a Q? Find the A in #[a(href="http://help.koodomobile.com") Help] or in our #[a(href="https://community.koodomobile.com/koodo") Community].
+							section.language-block.lang-fr
+								div.copy-block
+									p.large-text Notre site est hors d'antenne pour le moment. Les robots font la sieste, mais on va les réveiller bientôt! Essayez à nouveau plus tard.
+									p.small-text Une question? Consultez #[a(href="http://aide.koodomobile.com") l’Aide] ou la #[a(href="https://communaute.koodomobile.com/koodofr") Communauté].
+								video.outage-video.drums(autoplay loop muted)
+						<!-- /.km-outage -->
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js")
+		// START of local webserver JS resources
+		//- page-title-helper.js adds "View French" and "View English" links to page
+		//- script removed b/c this page is bilingual (i.e. EN and FR code is the same)
+		//- script(src="http://localhost:4000/public/scripts/page-title-helper.js")
+		script(src="http://localhost:4000/public/scripts/window-dimensions-helper.js")
+		// END of local webserver JS resources
+		script(src="scripts/main.js")

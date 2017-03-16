@@ -1,0 +1,44 @@
+@import "colors";
+@import "fonts";
+@import "standardize";
+@import "override";
+
+// styling for main parent element and its child elements
+.km-outage {
+	text-align: center;
+
+	p.large-text { margin: 0 auto; }
+
+	// colors
+	.lang-en {
+		background-color: $kRaspberry;
+		color: $kLightLime;
+	}
+	
+	.lang-fr {
+		background-color: $kLightTangerine;
+		color: $kRaspberry;
+	}
+}
+
+// default to hiding the videos on mobile
+.outage-video { display: none; }
+
+.copy-block { padding: 40px 20px; }
+
+.large-text {
+	max-width: 440px;
+	padding-bottom: 25px;
+	@extend .stag-sans-bold-web;
+	font-size: 20px;
+
+	span { display: block; }
+}
+
+.small-text {
+	margin: 0 auto;
+	@extend .stag-sans-semibold-web;
+	font-size: 14px;
+}
+
+@import "media-query";

@@ -1,0 +1,11 @@
+// standardized font classes
+// access with @extend .font-class-name
+.stag-sans-semibold-web,
+.stag-sans-bold-web {
+	font-family: "Stag Sans Web";
+	font-stretch: normal;
+	font-style: normal;
+}
+
+.stag-sans-semibold-web { font-weight: 600; }
+.stag-sans-bold-web { font-weight: 700; }

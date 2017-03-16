@@ -1,0 +1,15 @@
+// standard styling for main parent element and its child elements
+.km-outage {
+	display: block; // required for IE 11 to properly use padding-bottom
+	line-height: 1;
+
+	* { box-sizing: border-box; }
+
+	a {
+		color: $kDarkBlue;
+		
+		&:focus, &:hover { color: $kDarkBlueHover; }
+	}
+
+	p { margin: 0; }
+}

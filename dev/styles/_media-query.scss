@@ -1,0 +1,49 @@
+// standard Koodo breakpoints
+	// small  (0 - 767)
+	// medium (768 - 1099)
+	// large  (1100+)
+
+// override production defaults
+@media screen and (max-width: 767px) {
+	div#site-wrapper div#site-container { padding: 0; }
+}
+
+@media screen and (min-width: 768px) {
+	.language-block {
+		display: flex;
+		align-items: center;
+	}
+
+	// set widths for copy and video
+	.copy-block {
+		width: 65%;
+		padding: 0 45px; // remove top/bottom padding (not needed with flexbox)
+	}
+
+	.outage-video {
+		width: 35%;
+		display: block; // show the videos
+	}
+}
+
+@media screen and (min-width: 850px) {
+	.large-text {
+		max-width: 450px;
+		font-size: 30px;
+	}
+
+	.small-text { font-size: 16px; }
+}
+
+@media screen and (min-width: 1080px) {
+	.large-text {
+		max-width: 540px;
+		font-size: 36px;
+	}
+	
+	.small-text { font-size: 18px; }
+}
+
+@media screen and (min-width: 1200px) {
+	.km-outage { padding-bottom: 64px; }
+}
